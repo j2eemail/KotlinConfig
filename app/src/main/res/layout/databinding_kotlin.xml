@@ -1,0 +1,29 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="observableModel"
+            type="com.lxs.kotlinconfig.ObservableModel"></variable>
+
+        <variable
+            name="observableListener"
+            type="com.lxs.kotlinconfig.DataBindingKotlin.ObservableListener"></variable>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/ovservable_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{observableModel.txt}" />
+
+        <Button
+            android:id="@+id/ovservable_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{observableListener.onClick}"
+            android:text="提出文本提示" />
+    </LinearLayout>
+</layout>
